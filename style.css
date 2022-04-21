@@ -1,0 +1,77 @@
+.single-team{
+    position: relative;
+    overflow: hidden  ;
+    transition: all 0.3s ease;
+    opacity: 1;
+    width: 100%;
+ }
+
+ .team-img{
+   position: relative;
+ }
+
+ .team-img:before{
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 11;
+   transform: translateX(-100%);
+   transition: all 0.4s ease; 
+   visibility: hidden;
+   background: rgba(0, 0, 0, 0.5);
+   content: '';
+   height: 100%;
+   width: 100%;
+
+ }
+
+ .single-team:hover .team-img:before{
+   visibility: visible;
+   transform: translateY(0%);
+ }
+ .team-img img{
+   width: 100%;
+   z-index:10;
+   transition: 0.9s;
+ }
+ .single-team:hover img{
+   transform: scale(1.1);
+ }
+ .overlay-text{
+   position: absolute;
+   z-index: 15;
+   color: white;
+   top: 40%;
+   /* left:50%; */
+   text-align: center;
+   padding-left: 30px;
+   padding-right: 30px;
+   opacity: 0;
+   transition: all 0.4s ease;
+   font-family: serif;
+ }
+ .single-team:hover .overlay-text{
+   opacity: 1;
+   visibility: visible;
+   
+ }
+ .overlay-text h3{
+   text-transform: uppercase;
+   font-weight: 600;
+   transition: all 1s ease;
+   font-size: 30px;   
+   margin: 5px 0 15px;
+   position: relative;
+   top: -22px;
+ }
+ .single-team:hover h3{
+   top: 0;
+ }
+ .overlay-text p{
+   position: relative;
+   bottom: -22px;
+   transition: all 1s ease;
+ }
+ .single-team:hover p{
+   bottom: 0;
+ }
